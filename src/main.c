@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdint.h>
 #include <dlfcn.h>
 #include <funchook.h>
 #include <wayland-server.h>
@@ -17,7 +18,8 @@ static void wl_resource_post_event_array_hook(
   auto func = FHH_GET_ORIGINAL_FUNC(wl_resource_post_event_array);
 
   if (
-    resource != nullptr
+    opcode == WL_REGISTRY_GLOBAL
+    && resource != nullptr
     && resource->object.interface != nullptr
     && resource->object.interface->name != nullptr
     && strcmp(resource->object.interface->name, str(wl_registry)) == 0
