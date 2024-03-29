@@ -33,7 +33,7 @@ c_args = [
 funchook_helper = subproject('funchook-helper')
 funchook = funchook_helper.get_variable('funchook')
 
-funchook_helper_dep = funchook_helper.get_variable('funchook_helper_dep')
+funchook_helper_dep = funchook_helper.get_variable('DEP_FUNCHOOK_HELPER')
 distorm_dep = funchook.dependency('distorm')
 dl_dep = dependency('dl', include_type: 'system')
 
