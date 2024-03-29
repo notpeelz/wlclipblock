@@ -1,0 +1,5 @@
+option(
+  'docdir',
+  type: 'string',
+  description: 'documentation directory',
+)
