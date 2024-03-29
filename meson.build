@@ -16,7 +16,6 @@ files = [
 
 c_args = [
   '-Wno-pedantic',
-  '-Werror',
   '-Wno-error=unused-function',
   '-Wno-error=unused-parameter',
   '-Wno-error=unused-but-set-parameter',
