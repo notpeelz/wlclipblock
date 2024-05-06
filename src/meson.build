@@ -23,6 +23,6 @@ shared_library(
     DEP_DL,
   ],
   link_args: [
-    '-Wl,--version-script', meson.project_source_root() / 'version.map',
+    '-Wl,--version-script=@0@'.format(meson.project_source_root() / 'version.map'),
   ],
 )
